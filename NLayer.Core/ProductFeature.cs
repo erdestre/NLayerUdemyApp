@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NLayer.Core
 {
-    internal class ProductFeature
+    public class ProductFeature
     {
         public int Id { get; set; }
         public string Color { get; set; }
