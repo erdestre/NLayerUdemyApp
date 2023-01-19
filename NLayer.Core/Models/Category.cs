@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NLayer.Core
+namespace NLayer.Core.Models
 {
-    public abstract class BaseEntity
+    public class Category
     {
+        public string Name { get; set; }
         public int Id { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
+        public ICollection<Product> Products { get; set; }
+
     }
 }

@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NLayer.Core.UnitOfWorks
+namespace NLayer.Core.DTOs
 {
-    public interface IUnitOfWork
+    public class ProductWithCategoryDto : ProductDto
     {
-        Task CommitAsync();
-        void Commit();
+        public CategoryDto Category { get; set; }
     }
 }

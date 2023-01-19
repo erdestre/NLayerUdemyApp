@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace NLayer.Core.Repositories
 {
-    internal interface IGenericRepository<T> where T : class
+    public interface IGenericRepository<T> where T : class
     {
-        Task GetByIdAsync(int Id);
-        IQueryable<T> GetAll(Expression<Func<T, bool>> expression);
+        Task<T> GetByIdAsync(int Id);
+        IQueryable<T> GetAll();
         IQueryable<T> Where(Expression<Func<T,bool>> expression);
         Task<bool> AnyAsync(Expression<Func<T, bool>> expression);
         Task AddAsync(T entity);
